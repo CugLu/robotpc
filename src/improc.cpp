@@ -82,3 +82,29 @@ void imdrawgrid(Mat& mat, Point offset, Size size, Size count)
 		}
 	}
 }
+
+double imgetsim(const Mat& src1, const Mat& src2)
+{
+	Mat matGray1, matGray2;
+
+	if (src1.channels() == 3)
+		cvtColor(src1, matGray1, CV_RGB2GRAY);
+	if (src2.channels() == 3)
+		cvtColor(src2, matGray2, CV_RGB2GRAY);
+
+	int histSize = 256;
+	float range[] = { 0, 256 };
+	const float* histRange = { range };
+
+	Mat hist1, hist2;
+
+	calcHist(&matGray1, 1, 0, Mat(), hist1, 1, &histSize, &histRange, 1, 0);
+	normalize(hist1, hist1, 0, 1, NORM_MINMAX, -1, Mat());
+
+	calcHist(&matGray2, 1, 0, Mat(), hist2, 1, &histSize, &histRange, 1, 0);
+	normalize(hist2, hist2, 0, 1, NORM_MINMAX, -1, Mat());
+
+	double Similarity = compareHist(hist1, hist2, CV_COMP_CORREL);
+	return Similarity;
+
+}

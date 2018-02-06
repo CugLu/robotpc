@@ -17,13 +17,42 @@ void testRect();
 void testMouse();
 void testDrawGrid();
 void testBorder();
+void testImSim();
 
 const Test test[] = {
 		{ "testRect", testRect },
 		{ "testMoused", testMouse },
 		{ "testDrawGrid", testDrawGrid },
 		{ "testBorder", testBorder },
+		{ "testImSim", testImSim },
 };
+
+
+void testmain()
+{
+	int size = sizeof(test) / sizeof(Test);
+
+	while (true)
+	{
+		for (int i = 0; i < size; ++i)
+			printf("%d. %s\n", i + 1, test[i].name);
+		int select;
+		printf("please input: ");
+
+		scanf("%d", &select);
+		select--;
+		if (select < 0 || select > size - 1)
+		{
+			printf("invalid input\n");
+			select = 0;
+		}
+
+		printf("show [%s]\n", test[select].name);
+		test[select].foo();
+
+		cvWaitKey();
+	}
+}
 
 void testRect()
 {
@@ -87,30 +116,22 @@ void testDrawGrid()
 	imshow("gird", src);
 }
 
-
-
-void testmain()
+void testImSim()
 {
-	int size = sizeof(test) / sizeof(Test);
-	
-	while (true)
+	src = imread("res/bingkuai.png");
+	Mat image = imread(TEST_IMAGE);
+	for (int i = 0; i < 9; i++)
 	{
-		for (int i = 0; i < size; ++i)
-			printf("%d. %s\n", i + 1, test[i].name);
-		int select;
-		printf("please input: ");
-
-		scanf("%d", &select);
-		select--;
-		if (select < 0 || select > size-1)
+		for (int j = 0; j < 9; j++)
 		{
-			printf("invalid input\n");
-			select = 0;
+			//cv::Mat mat = cv::Mat(image, cv::Rect(OFFSETX + i * WIDTH, OFFSETY + j*HEIHT, WIDTH, HEIGHT ));
+			int left = 8 + i * 40;
+			int top = 208 + j * 40;
+			cv::Mat mat = image(cv::Range(top, top + 40), cv::Range(left, left + 40));
+
+			double sim = imgetsim(src, mat);
+			printf("%d %d %f\n", i, j, sim);
 		}
-
-		printf("show [%s]\n", test[select].name);
-		test[select].foo();
-
-		cvWaitKey();
 	}
+
 }
