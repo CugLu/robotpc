@@ -87,7 +87,7 @@
     <ClCompile Include="..\src\resourcemgr.cpp" />
     <ClCompile Include="..\src\rimage.cpp" />
     <ClCompile Include="..\src\test.cpp" />
-    <ClCompile Include="RobotPC.cpp" />
+    <ClCompile Include="robotpc.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\improc.h" />
