@@ -1,4 +1,4 @@
-#include "ResourceMgr.h"
+#include "resourcemgr.h"
 #include <string.h>
 #include <windows.h>
 #include "opencv2/highgui/highgui.hpp"

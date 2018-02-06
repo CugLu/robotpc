@@ -2,9 +2,9 @@
 //
 #include "precomp.h"
 
-#include "ResourceMgr.h"
+#include "resourcemgr.h"
 #include "rimage.h"
-#include "girdhelper.h"
+#include "improc.h"
 #include "test.h"
 
 using namespace std;

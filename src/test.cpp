@@ -1,6 +1,6 @@
 #include "precomp.h"
 #include "test.h"
-#include "girdhelper.h"
+#include "improc.h"
 
 const static char* TEST_IMAGE = "res/test.jpg";
 static Mat src;

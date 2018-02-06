@@ -83,16 +83,16 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\girdhelper.cpp" />
-    <ClCompile Include="..\src\ResourceMgr.cpp" />
+    <ClCompile Include="..\src\improc.cpp" />
+    <ClCompile Include="..\src\resourcemgr.cpp" />
     <ClCompile Include="..\src\rimage.cpp" />
     <ClCompile Include="..\src\test.cpp" />
     <ClCompile Include="RobotPC.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\girdhelper.h" />
+    <ClInclude Include="..\src\improc.h" />
     <ClInclude Include="..\src\precomp.h" />
-    <ClInclude Include="..\src\ResourceMgr.h" />
+    <ClInclude Include="..\src\resourcemgr.h" />
     <ClInclude Include="..\src\rimage.h" />
     <ClInclude Include="..\src\test.h" />
   </ItemGroup>

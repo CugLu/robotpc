@@ -24,13 +24,13 @@
     <ClCompile Include="..\src\rimage.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ResourceMgr.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\girdhelper.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\improc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\resourcemgr.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,16 +38,16 @@
     <ClInclude Include="..\src\rimage.h">
       <Filter>源文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ResourceMgr.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\girdhelper.h">
-      <Filter>源文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\precomp.h">
       <Filter>源文件</Filter>
     </ClInclude>
     <ClInclude Include="..\src\test.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\improc.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resourcemgr.h">
       <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>

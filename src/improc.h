@@ -1,5 +1,5 @@
-#ifndef __GIRDHELPER_H__
-#define __GIRDHELPER_H__
+#ifndef __IMPROC_H__
+#define __IMPROC_H__
 
 #include "precomp.h"
 
