@@ -11,4 +11,7 @@ tegra/
 *.sdf
 *.jpg
 *.exe
+*.tlog
 test/Debug/
+*.pdb
+*/Debug/

@@ -14,7 +14,7 @@ Mat imsubsquare(Mat& mat, Point point, int size);
 
 void imresizeshow(Mat& mat, int size);
 
-void subImageShow(Mat& mat, Point point, int size, int scale);
+void imshowsub(Mat& mat, Point point, int size, int scale);
 
 void imdrawgrid(Mat& mat, Point offset, Size size, Size count);
 

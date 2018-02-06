@@ -6,6 +6,25 @@ const static char* TEST_IMAGE = "res/test.jpg";
 static Mat src;
 static bool lbtndown = false;
 
+typedef void (*TEST_FUNC)();
+struct Test
+{
+	const char name[255];
+	TEST_FUNC foo;
+};
+
+void testRect();
+void testMouse();
+void testDrawGrid();
+void testBorder();
+
+const Test test[] = {
+		{ "testRect", testRect },
+		{ "testMoused", testMouse },
+		{ "testDrawGrid", testDrawGrid },
+		{ "testBorder", testBorder },
+};
+
 void testRect()
 {
 	Rect r = createRect(Point(0, 0), Size(100, 100));
@@ -33,7 +52,7 @@ static void on_mouse(int event, int x, int y, int flags, void *ustc)
 		Point pre_pt = Point(x, y);
 		imshow("mouse", img);
 		circle(img, pre_pt, 1, Scalar(255, 0, 0), -1);
-		subImageShow(img, pre_pt, 50, 3);
+		imshowsub(img, pre_pt, 50, 3);
 		printf("on mouse %d %d\n", x, y);
 	}
 }
@@ -72,15 +91,26 @@ void testDrawGrid()
 
 void testmain()
 {
-	// testRect();
+	int size = sizeof(test) / sizeof(Test);
+	
+	while (true)
+	{
+		for (int i = 0; i < size; ++i)
+			printf("%d. %s\n", i + 1, test[i].name);
+		int select;
+		printf("please input: ");
 
-	// testBorder();
+		scanf("%d", &select);
+		select--;
+		if (select < 0 || select > size-1)
+		{
+			printf("invalid input\n");
+			select = 0;
+		}
 
-	testDrawGrid();
+		printf("show [%s]\n", test[select].name);
+		test[select].foo();
 
-	//testMouse();
-
-	// testResizeWindow();
-
-	cvWaitKey();
+		cvWaitKey();
+	}
 }

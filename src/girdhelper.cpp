@@ -57,7 +57,7 @@ void imresizeshow(const char* name, Mat& mat, int size)
 	imshow(name, dst);
 }
 
-void subImageShow(Mat& mat, Point point, int size, int scale)
+void imshowsub(Mat& mat, Point point, int size, int scale)
 {
 	Mat src = imsubsquare(mat, point, size);
 	Mat dst;

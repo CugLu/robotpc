@@ -1,8 +1,8 @@
-﻿生成启动时间为 2018/2/4 23:26:54。
+﻿生成启动时间为 2018/2/6 22:22:26。
      1>项目“C:\Users\wangfei\Desktop\skynet\RobotPC\RobotPC\RobotPC.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\wangfei\Desktop\skynet\RobotPC\\src /ID:\work\opencv\opencv\build/include /ID:\work\opencv\opencv\build/include/opencv /ID:\work\opencv\opencv\build/include/opencv2 /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _MBCS /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\girdhelper.cpp
-         girdhelper.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\wangfei\Desktop\skynet\RobotPC\\src /ID:\work\opencv\opencv\build/include /ID:\work\opencv\opencv\build/include/opencv /ID:\work\opencv\opencv\build/include/opencv2 /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _MBCS /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\test.cpp
+         test.cpp
      1>c:\program files (x86)\microsoft visual studio 12.0\vc\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
                  c:\program files (x86)\microsoft visual studio 12.0\vc\atlmfc\include\afx.h(33) : 参见“MBCS_Support_Deprecated_In_MFC”的声明
          _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
@@ -17,4 +17,4 @@
 
 生成成功。
 
-已用时间 00:00:03.35
+已用时间 00:00:03.39
